@@ -1,0 +1,60 @@
+USAGE:
+  privateness-cli [command] [flags] [arguments...]
+
+DESCRIPTION:
+    The privateness command line interface
+
+COMMANDS:
+  addPrivateKey          Add a private key to wallet
+  addressBalance         Check the balance of specific addresses
+  addressGen             Generate skycoin or bitcoin addresses
+  addressOutputs         Display outputs of specific addresses
+  addressTransactions    Show detail for transaction associated with one or more specified addresses
+  addresscount           Get the count of addresses with unspent outputs (coins)
+  blocks                 Lists the content of a single block or a range of blocks
+  broadcastTransaction   Broadcast a raw transaction to the network
+  checkDBDecoding        Verify the database data encoding
+  checkdb                Verify the database
+  createRawTransaction   Create a raw transaction that can be broadcast to the network later
+  createRawTransactionV2 Create a raw transaction that can be broadcast to the network later
+  decodeRawTransaction   Decode raw transaction
+  decryptWallet          Decrypt a wallet
+  distributeGenesis      Distributes the genesis block coins into the configured distribution addresses
+  encodeJsonTransaction  Encode JSON transaction
+  encryptWallet          Encrypt wallet
+  fiberAddressGen        Generate addresses and seeds for a new fiber coin
+  help                   Help about any command
+  lastBlocks             Displays the content of the most recently N generated blocks
+  listAddresses          Lists all addresses in a given wallet
+  listWallets            Lists all wallets stored in the wallet directory
+  pendingTransactions    Get all unconfirmed transactions
+  richlist               Get skycoin richlist
+  send                   Send skycoin from a wallet or an address to a recipient address
+  showConfig             Show cli configuration
+  showSeed               Show wallet seed and seed passphrase
+  signTransaction        Sign an unsigned transaction with specific wallet
+  status                 Check the status of current Skycoin node
+  transaction            Show detail info of specific transaction
+  verifyAddress          Verify a skycoin address
+  verifyTransaction      Verify if the specific transaction is spendable
+  version                List the current version of Skycoin components
+  walletAddAddresses     Generate additional addresses for a deterministic, bip44 or xpub wallet
+  walletBalance          Check the balance of a wallet
+  walletCreate           Create a new wallet
+  walletCreateTemp       Create a new temporary wallet
+  walletHistory          Display the transaction history of specific wallet. Requires skycoin node rpc.
+  walletKeyExport        Export a specific key from an HD wallet
+  walletOutputs          Display outputs of specific wallet
+  walletScanAddresses    Scan addresses ahead for deterministic, bip44 or xpub wallet
+
+FLAGS:
+  -h, --help   help for privateness-cli
+
+Use "privateness-cli [command] --help" for more information about a command.
+
+ENVIRONMENT VARIABLES:
+    RPC_ADDR: Address of RPC node. Must be in scheme://host format. Default "http://127.0.0.1:6660"
+    RPC_USER: Username for RPC API, if enabled in the RPC.
+    RPC_PASS: Password for RPC API, if enabled in the RPC.
+    COIN: Name of the coin. Default "privateness"
+    DATA_DIR: Directory where everything is stored. Default "$HOME/.$COIN/"
